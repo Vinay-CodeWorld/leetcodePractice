@@ -14,7 +14,7 @@ public class QueueArrayImplementation {
             rear++;
             size++;
             arr[front]=val;
-            System.out.println(front+" <-> "+ rear);
+         //   System.out.println(front+" <-> "+ rear);
         }
         else  if(rear==arr.length-1){
             //   System.out.println(front+" <-> "+ rear);
@@ -24,7 +24,7 @@ public class QueueArrayImplementation {
             
             arr[++rear]=val;
             size++;
-            System.out.println(front+" <-> "+ rear);
+            //System.out.println(front+" <-> "+ rear);
         }
     }
 
@@ -48,6 +48,11 @@ public class QueueArrayImplementation {
     }
 
     //traverse
+    public void display(){
+        for(int i=front;i<=rear;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
 
     }
    
@@ -65,13 +70,13 @@ public class QueueArrayImplementation {
         q.add(4);
         // q.add(5);
 
-          q.remove();
+         q.remove();
           q.add(5);
           q.add(6);
-        System.out.println(q.peek()+" peeked element");
+       // System.out.println(q.peek()+" peeked element");
       
         System.out.println(q.size+" size of queue");
-
+        q.display();
 
 
     }
